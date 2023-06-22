@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(248, 226, 248, 0.699);
+    font-family:'Times New Roman';
+    text-align: center;
+}
+
+
+p{
+    font-family: 'Franklin Gothic Medium';
+    font-size: 15px;
+    color: rgb(93, 51, 207);
+}
+
+table{
+    border:4px solid;
+    color: rgb(27, 55, 63);
+    border-color: rgb(21, 150, 189);
+    border-style: outset;
+    font-family:Helvetica;
+    font-size: 14px;
+}
+
+    h1{
+        font-family: Serif;
+        font-size: 25px;
+        color:darkblue;
+
+    }

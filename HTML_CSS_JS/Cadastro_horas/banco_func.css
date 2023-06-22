@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cursive, sans-serif;
+    color: 	#000000;
+    border: none;
+  }
+  
+  input, label {
+    display: block;
+    outline: none;
+    width: 100%;
+  }
+  
+  a {
+    color: #E60084;
+  }
+  
+  body {
+    padding-top: 5vh;
+    background-size: cover;
+    background-position-y: -150px;
+  }
+  
+
+  #campo1 {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 25px;
+  }
+  
+ 
+  #register-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+  
+  .bloco {
+    flex: 1 1 45%;
+    position: relative;
+  }
+  
+  .spacing {
+    margin-right: 2.5%;
+  }
+  
+  label {
+    font-weight: bold;
+    font-size: .8rem;
+  }
+  
+  input {
+    border-bottom: 2px solid #00FFFF;
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+  }
+  
+  input:focus {
+    border-color: #E60084;
+  }
+  
+  input[type="submit"] {
+    background-color: #E60084;
+    color: #FFF;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+
+  
+  .spanResposta {
+    color: #ff1a1a;
+    font-weight: bolder;
+    position: center;
+    bottom: 57px;
+    font-size: 18px;
+  }
+  
+  

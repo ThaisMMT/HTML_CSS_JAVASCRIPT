@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Atividade Javascript</title>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" 
+		      type = "text/css" 
+			  href = "./MyCss.css" 
+			  media = "all">
+
+		
+	
+		<script type = "text/javascript">
+			
+			function exibir(){
+				var compra = parseInt(document.getElementById("campoCompra").value);
+				var pago  = parseInt(document.getElementById("campoPago").value);
+				var troco = Math.abs (pago-compra);
+                var frase = "O troco é " + troco
+				
+				if(pago == compra){
+                    
+                    document.getElementById("spanResposta").innerHTML= "Não há troco";
+                    
+                }
+                else if (pago > compra){
+                    
+                    document.getElementById("spanResposta").innerHTML= frase;
+                    
+                }
+				else {
+				
+					document.getElementById("spanResposta").innerHTML= "Valor pago menor que o valor da compra";
+
+				}
+				
+			}
+			
+			function limpartroco(){
+				document.getElementById("campoCompra").value = null;
+                document.getElementById("campoPago").value = null;
+				document.getElementById("spanResposta").innerHTML= null;
+			}
+			
+			function popArrey() {
+            	
+				var arr = ['Eu', 'estudo', 'Javascript', 'Agora'];
+				var popArr = arr.pop();
+				document.getElementById("popArr").innerHTML = "Esta é o Arrey  " + arr + " e aqui esta a palavra removida do Arrey:  " + popArr;
+               
+    		}
+	
+			function limparpopArrey() {
+            	
+			document.getElementById("popArr").innerHTML = null;
+    
+    		}
+
+			function pushArrey() {
+            	
+				var arrP= ['Eu', 'estudo', 'Javascript', 'Agora'];
+				var pushArrP = arrP.push("Mesmo");
+				document.getElementById("pushArr").innerHTML = "Este é o Arrey  " + arrP + " e agora existe  " + pushArrP +"  elementos no Arrey"
+               
+    		}
+	
+			function limparpushArrey() {
+            	
+			document.getElementById("pushArr").innerHTML = null;
+    
+    		}
+
+			
+			function formatarCampo(campoTexto) {
+    				if (campoTexto.value.length <= 11) {
+        				campoTexto.value = mascaraCpf(campoTexto.value);
+					} else {
+        				campoTexto.value = mascaraCnpj(campoTexto.value);
+   				 }
+			}
+			function retirarFormatacao(campoTexto) {
+    					campoTexto.value = campoTexto.value.replace(/(\.|\/|\-)/g,"");
+					}
+			//mascara do CPF
+			function mascaraCpf(valor) {
+    		return valor.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/g,"\$1.\$2.\$3\-\$4");
+				}
+			//mascara do CNPJ
+			function mascaraCnpj(valor) {
+   			 return valor.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/g,"\$1.\$2.\$3\/\$4\-\$5");
+			}
+
+			function mascara(src, mask) {
+					var i = src.value.length;
+					var saida = "#";
+					var texto = mask.substring(i)
+					var aux = 0;
+					console.log("i="+i);
+					console.log("saida="+saida);
+					console.log("texto="+texto);
+					console.log("texto.substr(aux, 1)="+texto.substr(aux, 1));
+					console.log("-------------------------");
+					
+					while (aux<=i && texto.substr(aux, 1) != saida) {
+					   console.log("texto.substr(aux, 1)="+texto.substr(aux, 1));
+					   console.log("aux="+aux);
+					   src.value += texto.substr(aux, 1);
+					   aux++;
+					}
+					console.log("saiu do laço");
+				}
+
+				function alerta(){
+    					var escolha = confirm("Quer entrar no Sistema?");
+  						var botao;
+ 						 if (escolha == true) {
+  									botao = "OK";
+ 									 window.alert("Bem vindo ao nosso Sistema");
+ 							 }
+  							else {
+  									botao = "Cancelar";
+  									window.alert("Voce não entrou no nosso Sistema");
+ 							 }
+ 
+ 							 }
+
+
+		
+
+		</script>		
+	</head>
+	<body>
+	<center>
+
+        <div>
+		<h1>Troco</h1>
+		<table border="1" cellpadding="3" cellspacing="0">
+			<tr>
+				<td>Valor Da Compra</td>
+				<td><input type="text" id="campoCompra"></td>
+			</tr>
+
+            <tr>
+				<td>Valor Pago</td>
+				<td><input type="text" id="campoPago"></td>
+			</tr>
+
+			<tr>
+				<td><p>Resposta:</p></td>
+				<td><span id="spanResposta"></span></td>
+			</tr>
+
+			<tr>
+				<td colspan="2" style="text-align: center;">
+					<input type="button" value="Exibir" onclick="exibir()">
+					<input type="button" value="Limpar"   onclick="limpartroco()">
+				</td>	
+			</tr>
+		</table>
+		</div>
+</br>
+
+	<h1>Metodo Pop()</h1>
+
+	<div>
+	<table border="1" cellspacing="1" cellpading="1">
+	<tr>
+		<td> <p>Aqui esta o pop() este metodo remove o ultimo elemento do Arrey e retorna o valor removido</p></td>
+		
+	</tr>
+	<tr>
+		<td><span id="popArr">*</span></td>
+	</tr>
+	<tr>
+		<td> <input type="button" value="Pop" onclick="popArrey()">
+			<input type="button" value="Limpar"   onclick="limparpopArrey()">
+		 
+		</td>
+	
+	</tr>
+ 
+	</table>
+	</div>
+
+	<h1>Metodo Push()</h1>
+
+	<div>
+	<table border="1" cellspacing="1" cellpading="1">
+		<tr>
+			<td> <p>Aqui esta o push() este é um metodo que acrecenta N elementos no Arrey e retorna o numero de elementos existente no arrey.</p></td>
+			
+		</tr>
+		<tr>
+			<td><span id="pushArr">*</span></td>
+		</tr>
+		<tr>
+			<td> <input type="button" value="Push" onclick="pushArrey()">
+				<input type="button" value="Limpar"   onclick="limparpushArrey()">
+			 
+			</td>
+		</tr>
+	    </table>
+	</div>
+
+	</br>
+
+	<div>
+		<h1>CPF/CNPJ/CEP</h1>
+	<table border ="1" cellspacing="1" cellpading="2">
+		<tr>
+			<td colspan="2">CPF/CNPJ e CEP</td>
+		</tr>
+
+		<tr>
+			<td align="center">Digite o CPF ou CNPJ</td>
+			<td> <input type="text" onfocus="javascript: retirarFormatacao(this);" 
+    				onblur="javascript: formatarCampo(this);" maxlength="14"/> </td>
+		
+		</tr>
+
+		<tr>
+			<td>CEP</td>
+			<td><input type="text" maxlength="9" name="cep" 
+				onkeypress="mascara(this, '#####-###')"/> </td>
+		</tr>
+	</table>
+	</div>
+	</br>
+
+	
+	<div>
+		<h1>PopUp</h1>
+		<table border="1" cellspacing="1" cellpading="2">
+		  <tr>
+			<td>Nome</td>
+			<td><input type="text" id="Nome" ></td>
+			<td><input type="button" value="Enviar" onclick="alerta()"></td>
+		  </tr>
+		</table>
+		</div>
+
+
+
+	
+  
+	
+
+	</center>
+
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Banco de Dados do Funcionário</title>
+  <link rel="stylesheet" href="banco_func.css">
+</head>
+<body>
+   
+  <div id="campo1">
+        <br>
+        <center>
+    <legend>Banco de Dados dos Funcionários</legend>
+    <br>
+    <div id="register-form">
+      <div class="bloco spacing">
+          <label for="name">NOME:</label>
+          <input type="text" name="name" id="name" placeholder="Digite seu nome" data-required data-min-length="3" data-max-length="16">
+      </div>
+      <br>
+      <div class="bloco spacing">
+        <label for="job">CARGO:</label>
+        <input type="office" name="office" id="office" placeholder="Digite seu cargo" data-required data-only-letters>
+      </div>
+      <br>
+      <div class="bloco">
+        <label for="hora01">HORÁRIO DE ENTRADA: </label>
+        <input type="time" id="horaInicio" name="appt"
+       min="13:00" max="20:00" required>
+      </div>
+      <br>
+      <div class="bloco">
+        <label for="hora02">HORÁRIO DE SAÍDA: </label>
+        <input type="time" id="horaFim" name="appt"
+       min="13:00" max="20:00" required>
+      </div>
+      <br>
+     
+        <input id="btn-submit" type="submit" value="Registrar" onclick="calcularHora()">
+      </div>
+    </div>
+  </div> 
+  <center>
+    <p>Resposta:</p>
+    <span id="spanResposta"></span>
+</center>
+  <script src="validacao.js"></script>
+  </center>
+</body>
+</html>
