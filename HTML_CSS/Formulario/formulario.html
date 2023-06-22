@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body bgcolor="#dcd4ff" >
+
+<center>
+
+    <div>
+    <a><font color="Black" size="15" face="Brush Script MT"> Formulario Desafios de Programação</font></a>
+    
+    <form method="get"> 
+
+        <table border="12"  bordercolor="#510091" cellpadding="5" cellspacing="0" >
+
+            <tr>
+                
+					<td>Nome</td>
+					<td><input type="text"  placeholder="Entre seu nome"  size="20" id="campoNome" 
+					 maxlength="20"  name="campoNome" required></td>
+                     
+                     <td rowspan="8"><img src="./codigofoto.png" width="600"></td>
+                     
+				
+            </tr>
+            <tr></tr>
+            <td>Senha</td>
+			<td><input type="password" placeholder="Digite uma senha"
+				id="campoSenha"  name="campoSenha" required></td>
+            </tr>
+
+            <tr>
+
+                <td>Qual destes Estados voce representa?</td>
+                <td>
+                    <select id="CampEstado" name="CampEstado">
+                        <option selected > São Paulo
+                        <option> Rio de Janeiro
+                        <option> Minas Gerais
+                        <option> Rio Grande do Sul
+                                    
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Qual seu nivel de programação?</td>
+                <td><input type="radio" id="CampNivel" name="CampNivel" value="intermediario">Intermediario
+                <input type="radio" id="CampNivel" name="CampNivel" value="avançado" checked>Avançado
+                </td>
+            </tr>
+
+            <tr>
+                <td>Em qual linguagem voce ira programar?</td>
+                <td>
+                    <input type="checkbox" id="CampLing" name="CampLing" value="C#">C#
+                    <input type="checkbox" id="CampLing" name="CampLing" value="Java" checked>Java
+                    <input type="checkbox" id="CampLing" name="CampLing" value="python">Python
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Data e horas que voce podera participar:</td>
+                <td><input type = "datetime-local" name = "campoDataHora"/></td>
+            </tr>
+
+            <tr>
+                <td>Observação:</td>
+                <td>
+                    <textarea placeholder="Digite aqui" id="CampDesc" 
+                    name="CampDesc" cols="30" rows="8"></textarea>
+                </td>
+            </tr>
+            
+	     </table>
+        <input type="submit" value="Enviar">
+         <input type="reset" value="Voltar">
+    </form>
+    </div>
+</center>  
+    
+</body>
+</html>

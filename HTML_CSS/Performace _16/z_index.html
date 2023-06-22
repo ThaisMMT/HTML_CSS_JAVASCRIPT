@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Z-index</title>
+
+    <style>
+
+div {
+border: 2px solid black;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+height: 200px;
+padding: 20px;
+position: fixed;
+width: 200px;
+font-family: 'Franklin Gothic Medium';
+color: antiquewhite;
+}
+
+.fot-1 {
+background-image: url(./fone.png);
+}
+
+.fot-2 {
+background-image: url(./fone2.png);
+left: 50px;
+top: 50px;
+z-index: 1;
+}
+
+.fot-3 {
+background-image: url(./fone3.jpg);
+left: 100px;
+top: 100px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+
+<div class="fot-1">Foto1</div>
+<div class="fot-2">Foto2</div>
+<div class="fot-3">Foto 3</div>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Validação Requerido</title>
+		<meta charset="UTF-8">
+		<style type="text/css" media="all">
+			body {
+			   background-color:aqua;
+			}
+		</style>
+		<script type = "text/javascript">
+			function validarRequerido(){
+			   limpar();
+			   
+			   var nome = document.getElementById("campoNome").value;
+			   if(nome == null || nome == ""){
+			      document.getElementById("spanNome").innerHTML += " Preencher este campo";
+				  return false;
+			   }
+			   
+			   return true;
+			}
+			
+			function limpar(){
+				document.getElementById("spanNome").innerHTML = "*";
+				document.getElementById("spanIdade").innerHTML = "*";
+				document.getElementById("spanSenha").innerHTML = "*";
+			}
+			
+		</script>		
+	</head>
+	<body>
+		<h1>Cadastro</h1>
+		<form id="formCadastro" method="get">
+			<table border="0" cellpadding="3" cellspacing="0">
+				<tr>
+					<td>Nome</td>
+					<td><input type="text" id=campoNome></td>
+					<td><span id="spanNome" style="color:red">*</span></td>
+				</tr>
+				
+				
+				
+				<tr>
+					<td>Idade</td>
+					<td><input type="text" id=campoIdade></td>
+					<td><span id="spanIdade" style="color:red">*</span></td>
+				</tr>
+				<tr>
+					<td>Senha</td>
+					<td><input type="password" id=campoSenha></td>
+					<td><span id="spanSenha" style="color:red">*</span></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center;">
+						<input type="submit" value="Enviar" 
+						       onclick="return validarRequerido()">
+						<input type="reset" value="Limpar" onclick="limpar()">
+					</td>	
+				</tr>
+			</table>
+		</form>
+		<p>* campo obrigatório</p>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+body{
+    /* background-color: rgb(219, 255, 255); */
+    background-image: url(./Black.jpg);
+    font-family: 'Segoe UI';
+    font-size: 15px;
+    }
+
+    
+table{
+	border:4px solid;
+	color: rgb(241, 178, 59);
+	border-color: rgb(245, 222, 148);
+    font-family: 'Times New Roman';
+	font-size: 18px;
+    border-style:outset;
+	}
+
+    .form{
+        font-family: 'Franklin Gothic Medium';
+        font-size:15px;
+        color: rgb(250, 255, 175);
+    }
+

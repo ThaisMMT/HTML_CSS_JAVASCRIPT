@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+
+
+<style>
+
+img.estilo{
+        margin-left: 100px;
+        margin-top: 150px;
+        height: 100px;
+        width: 100px;
+     }
+
+.imagem {
+            width: 100%;
+            height: 100%;            
+            background-repeat: no-repeat;
+            
+            background-size: cover;}
+    h1{
+        font-family: Geneva;
+        font-size: 40px;
+        color: gold;
+
+    }
+    
+
+    #bot{
+        font-family: 'Franklin Gothic Medium';
+        font-size:15px;
+        color: rgb(37, 7, 75);
+
+    }
+
+
+</style>
+
+<link rel="stylesheet" 
+      type = "text/css" 
+      href = "./Css_estilo.css" 
+      media = "all">
+<body class="imagem">
+
+    <img src="./imagem_flor.jpg" class="estilo" >
+
+<center>
+
+    <div>
+    <a><h1>Cadastro</h1></a>
+    
+    <form method="get"> 
+
+        <table cellpadding="5" cellspacing="0" class="form" >
+
+            <tr>
+                
+					<td>Nome</td>
+					<td><input type="text"  placeholder="Digite seu nome"  size="20" id="campoNome" 
+					 maxlength="20"  name="campoNome" required></td>
+                     
+                    
+                     
+				
+            </tr>
+            <tr></tr>
+            <td>Senha</td>
+			<td><input type="password" placeholder="Digite uma senha"
+				id="campoSenha"  name="campoSenha" required></td>
+            </tr>
+
+            <tr>
+                <td>Digite seu CPF</td>
+                <td><input type="text"  placeholder="Digite seu CPF"  size="20" id="campoCPF" 
+                    maxlength="20"  name="campoCPF" required></td>
+            </tr>
+
+            <tr>
+
+                <td>Estado</td>
+                <td>
+                    <select id="estado" name="estado">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Endereço</td>
+                <td><input type="text"  placeholder="Digite seu endereço"  size="20" id="campoEnde" 
+                 maxlength="20"  name="campoEnde" required></td>
+            </tr>
+
+            <tr>
+                <td>Telefone</td>
+                <td><input type="text"  placeholder=" Digite seu Telefone"  size="20" id="campoTel" 
+                 maxlength="20"  name="campoTel" required></td>
+            </tr>   
+
+            
+            <tr>
+                <td>Email</td>
+                <td><input type="text"  placeholder=" Digite seu Email"  size="20" id="campoEmail" 
+                 maxlength="20"  name="campoEmail" required></td>
+            </tr> 
+            
+            <tr>
+                <td>Data de nascimento</td>
+                <td><input type = "date" name = "campoData"/></td>
+            </tr>
+
+            <tr>
+                <td>Comentarios:</td>
+                <td>
+                    <textarea placeholder="Digite aqui" id="CampCom" 
+                    name="CampCom" cols="30" rows="8"></textarea>
+                </td>
+            </tr>
+            
+	     </table>
+        <input type="submit" value="Enviar" id="bot">
+         <input type="reset" value="Voltar" id="bot">
+    </form>
+    <div>
+    
+    <a href="./z_index.html"><p style="font-family: Arial; font-size: 30px; color: gold;">Clique aqui e veja a pagina Z-index</p></a>
+    </div>
+   
+</center>  
+
+
+    
+</body>
+</html>
